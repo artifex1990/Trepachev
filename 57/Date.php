@@ -1,7 +1,7 @@
 <?php
 	class Date
 	{
-        private const FORMAT_DATE = 'Y-m-d';
+        const FORMAT_DATE = 'Y-m-d';
         private $date = null;
         private $monthRu = ['January' => 'Январь', 
                             'February' => 'Февраль', 
