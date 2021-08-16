@@ -1,5 +1,5 @@
 <?php
-    Class Link extends Tag
+    class Link extends Tag
     {
         const LINK_ACTIVE = 'active';
         public function __construct($src = '')

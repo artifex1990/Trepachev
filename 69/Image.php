@@ -1,5 +1,5 @@
 <?php
-    Class Image extends Tag 
+    class Image extends Tag 
     {
         public function __construct($src = '', $alt = '')
         {
