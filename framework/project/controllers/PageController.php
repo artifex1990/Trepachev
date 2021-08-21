@@ -5,21 +5,25 @@
 
     class PageController extends Controller
     {
-
-        public function test() 
+        public function one($params)
         {
-            $page = new Page; // создаем объект модели
+            $page = (new Page) -> getById($params['id']);
+            
+            $this->title = $page['title'];
+            return $this->render('page/one', [
+                'page' => $page,
+                'h1' => $this->title
+            ]);
+        }
         
-            $data = $page->getById(3); // получим запись с id=3
-            var_dump($data);
-            echo "<hr>";
+        public function all()
+        {
+            $this->title = 'Список всех страниц';
             
-            $data = $page->getById(5); // получим запись с id=5
-            var_dump($data);
-            echo "<hr>";
-            
-            $data = $page->getByRange(2, 5); // записи с id от 2 до 5
-            var_dump($data);
-            echo "<hr>";
+            $pages = (new Page) -> getAll();
+            return $this->render('page/all', [
+                'pages' => $pages,
+                'h1' => $this->title
+            ]);
         }
     }

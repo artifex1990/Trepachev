@@ -5,6 +5,7 @@
         <th>Цена</th>
         <th>Количество</th>
         <th>Категория</th>
+        <th>Ссылка на страницу</th>
     </tr>
     <?php foreach ($products as $product): ?>
     <tr>
@@ -12,6 +13,7 @@
         <td><?= $product['price'] ?></td>
         <td><?= $product['quantity'] ?></td>
         <td><?= $product['category'] ?></td>
+        <td><a href="/product/<?= $product['id']; ?>/">ссылка на страницу</td>
     </tr>
     <?php endforeach; ?>
 </table>
