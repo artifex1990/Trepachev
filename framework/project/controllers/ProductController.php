@@ -9,6 +9,7 @@
 
         public function __construct()
         {
+            $this->title = 'Действие контроллера Product';
             $this->products = [
                 1 => [
                     'name'     => 'product1',

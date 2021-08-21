@@ -2,7 +2,6 @@
 	use \Core\Route;
 	
 	return [
-		new Route('/product/all/', 'product', 'all'), 
-		new Route('/product/:id/', 'product', 'show'), 
+		new Route('/page/:id/', 'page', 'show'), 
 	];
 	

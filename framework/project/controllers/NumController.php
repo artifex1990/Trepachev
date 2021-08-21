@@ -6,6 +6,7 @@
     {
         public function sum($params)
         {
+            $this->title = 'Действие контроллера Num';
             echo array_sum(array_filter($params, function($a) {return is_numeric($a);}));
         }
     }

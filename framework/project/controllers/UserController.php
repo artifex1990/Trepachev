@@ -8,6 +8,8 @@
 
         public function __construct()
         {
+            $this->title = 'Действие контроллера User';
+
             $this->users = [
                 1 => ['name'=>'user1', 'age'=>'23', 'salary' => 1000],
                 2 => ['name'=>'user2', 'age'=>'24', 'salary' => 2000],

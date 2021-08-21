@@ -6,6 +6,8 @@
 	class HelloController extends Controller
 	{
 		public function index() {
+			$this->title = 'Действие контроллера Hello';
+
 			$this->title = 'Фреймворк работает!';
 			
 			$hello = new Hello; // тестовая модель для проверки базы
