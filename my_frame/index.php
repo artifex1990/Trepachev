@@ -33,4 +33,4 @@
 
     $page  = ( new Dispatcher ) -> getPage($track);
 
-    echo $page;
+    echo (new View) -> render($page);

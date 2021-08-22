@@ -7,6 +7,8 @@
     {
         public function show($params)
         {
-            return 'PageController';
+            $this->title = 'Page show';
+
+            return $this->render('page/show', ['text' => 'Hello, Wrold!']);
         }
     }
