@@ -3,6 +3,5 @@
 
     return [
         new Route('/myshow/', 'page', 'show'),
-        new Route('/myshow/:id/', 'page', 'show'),
-        new Route('/mytest/', 'page', 'test'),
+        new Route('/page/:id/', 'page', 'one'),
     ];
