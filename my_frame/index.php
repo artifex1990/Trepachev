@@ -27,4 +27,5 @@
 		}
     });
 
-    echo (new Hello);
+    $routes = require $_SERVER['DOCUMENT_ROOT'] . '/project/config/routes.php';
+    var_dump($routes);
