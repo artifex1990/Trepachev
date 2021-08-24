@@ -66,3 +66,17 @@ Route::get('/user/{id}/{name}/', function ($id, $name) {
     return "User Id:$id <br> User name: $name";
 })->where(['id' => '[0-9]+', 'name' => '[a-z]{3,}']);
 
+/* Задача 2.10 */
+Route::get('/articles/{date}/', function ($date) {
+    return $date;
+})->where('date', '\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])');
+
+/* Задача 2.11 */
+Route::get('/users/{order}/', function ($order) {
+    return $order;
+})->where('order', '(name|surname|age)');
+
+/* Задача 2.12 */
+Route::get('/{year}/{month}/{day}/', function ($year, $month, $day) {
+    return (new DateTime("$year-$month-$day"))->format('l');
+})->where(['year' => '\d{4}', 'month' => '(0[1-9]|1[0-2])', 'day' => '(0[1-9]|[1-2][0-9]|3[0-1])']);
