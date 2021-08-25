@@ -3,8 +3,8 @@
 	
 	class TestController extends Controller
 	{
-		public function show()
+		public function show($param1, $param2)
 		{
-			return 'TestController';
+			return $param1 . ' ' . $param2;
 		}
 	}
