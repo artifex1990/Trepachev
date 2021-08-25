@@ -65,11 +65,11 @@
 
         private function renderEmployee($id)
         {
-            $result  = "Имя пользователя: {$this->renderField($id, 'name')} <br>";
-            $result .= "Фамилия пользователя: {$this->renderField($id, 'surname')} <br>";
-            $result .= "Зарплата пользователя: {$this->renderField($id, 'salary')} <br>";
-
-            return $result;
+            return view('employee.showOne', [
+                "name" => $this->renderField($id, 'name'),
+                "surname" => $this->renderField($id, 'surname'),
+                "salary" => $this->renderField($id, 'salary')
+            ]);
         }
 
         private function renderField($id, $field)

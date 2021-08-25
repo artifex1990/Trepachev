@@ -3,8 +3,8 @@
 	
 	class TestController extends Controller
 	{
-		public function show($param1, $param2)
+		public function show()
 		{
-			return $param1 . ' ' . $param2;
+			return view('test', ['var1' => '1', 'var2' => '2']);
 		}
 	}
