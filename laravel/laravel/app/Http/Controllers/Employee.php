@@ -66,11 +66,17 @@
         private function renderEmployee($id)
         {
             return view('employee.showOne', [
-                "FIO" => [
+                "user" => [
                     "name" => $this->renderField($id, 'name'),
                     "surname" => $this->renderField($id, 'surname'),
                     "salary" => $this->renderField($id, 'salary'),
+                    'location' => [
+                        "country " => 'Польша',
+                        "city" => 'Краков',
+                    ],
+                    
                 ],
+                "str" => '<b>строка</b>',
                 "class" => 'name',
                 "style" => 'color: red',
                 "link" => ["text" => "ссылка", "href" => "/"]
