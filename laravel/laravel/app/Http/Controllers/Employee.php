@@ -56,6 +56,16 @@
             return "Поле $field не найдено!";
         }
 
+        public function showDay($numDay)
+        {
+            return view('employee.day', ['numberDay' => $numDay]);
+        }
+
+        public function showMonth($numberMonth)
+        {
+            return view('employee.month', ['numberMonth' => $numberMonth]);
+        }
+
         private function checkUser($id)
         {
             if (!isset($this->employees[$id])) {
@@ -74,12 +84,13 @@
                         "country " => 'Польша',
                         "city" => 'Краков',
                     ],
-                    
+                    'age' => 17,
                 ],
                 "str" => '<b>строка</b>',
                 "class" => 'name',
                 "style" => 'color: red',
-                "link" => ["text" => "ссылка", "href" => "/"]
+                "link" => ["text" => "ссылка", "href" => "/"],
+                'arrayNumber' => [1, 2, 3, 4, 5],
             ]);
         }
 

@@ -22,6 +22,16 @@
 			echo 'Это очень не логичное использование php прямо тут!=)<br>';
 		@endphp
 
+		@unless ($user['age'] >= 18)
+			<p>Пользователь несовершеннолетний!</p>
+		@endunless
+
+		@if (count($arrayNumber) > 0)
+			<p>Сумма элементов {{ implode(', ', $arrayNumber) }} = {{ array_sum($arrayNumber) }}</p>
+		@else
+			<p>Массив пустой</p>
+		@endif
+
 		<input type="text" value="{{ $user['name'] }}">
 		<input type="text" value="{{ $user['surname'] }}">
 		<input type="text" value="{{ $user['salary'] }}">

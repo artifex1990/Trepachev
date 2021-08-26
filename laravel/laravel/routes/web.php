@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/employee/{id}/', 'Employee@showOne')->where('id', '[0-9]+');
+Route::get('/employee/day/{day}/', 'Employee@showDay')->where('day', '[1-7]');
+Route::get('/employee/month/{month}/', 'Employee@showMonth')->where('month', '[0-9]+');
+
