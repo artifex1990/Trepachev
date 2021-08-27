@@ -36,6 +36,8 @@
                 ],
                 'employees' => $employees,
                 'aEmpty' => [],
+                'title' => 'Циклы',
+                'aside' => 'Левая менюха'
             ]);
         }
     }

@@ -1,3 +1,13 @@
+@extends('template')
+
+@section('title', $title)
+
+@section('sidebar')
+    @parent
+	<p>{{ $aside }}</p>
+@endsection
+
+@section('content')
 <ul>
     @foreach ($arr as $elem)
         <li>{{ sqrt(pow($elem, 2)) }}</li>
@@ -128,3 +138,4 @@
 @for ($i = 0; $i < 10; $i++)
     <p>{{ $i }}</p>
 @endfor
+@endsection
