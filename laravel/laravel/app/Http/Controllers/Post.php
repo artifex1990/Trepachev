@@ -45,4 +45,18 @@
 				],
 			];
         }
+
+		public function showOne($id) 
+		{
+			if (isset($this->posts[$id])) {
+				return view('posts.showOne', ['post' => $this->posts[$id]]);
+			}
+
+			return view('posts.error', ['error' => "Извините, страница с $id не найдена!"]);
+		}
+
+		public function showAll() 
+		{
+			return view('posts.showAll', ['posts' => $this->posts]);
+		}
     }

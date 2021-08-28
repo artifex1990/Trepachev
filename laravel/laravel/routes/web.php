@@ -24,3 +24,6 @@ Route::get('/employee/month/{month}/', 'Employee@showMonth')->where('month', '[0
 Route::get('/my/cycle/', 'MyController@showCycle');
 
 Route::get('/practical/', 'PracticalController@showPractica');
+
+Route::get('/post/{id}/', 'Post@showOne')->where('id', '[0-9]+');
+Route::get('/posts/', 'Post@showAll');
