@@ -31,3 +31,5 @@ Route::get('/posts/', 'Post@showAll');
 Route::get('/categories/', 'Product@showCategoryList');
 Route::get('/product/{category_id}/', 'Product@showCategory')->where(['category_id' => '[0-9]+']);
 Route::get('/product/{category_id}/{product_id}', 'Product@showProduct')->where(['category_id' => '[0-9]+', 'product_id' => '[0-9]+']);
+
+Route::get('/forms/', 'FormController@form');
