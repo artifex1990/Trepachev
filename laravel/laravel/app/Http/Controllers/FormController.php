@@ -5,12 +5,21 @@
 
     class FormController extends Controller
     {
-        public function form(Request $request)
+        public function blended(Request $request)
         {
-            return view('forms.form');
+            if ($request->isMethod('get')) {
+                return $this->form($request);
+            } elseif ($request->isMethod('post')) {
+                return $this->result($request);
+            }
         }
 
-        public function result(Request $request)
+        private function form(Request $request)
+        {
+            return view('forms.form', ['method' => $request->method()]);
+        }
+
+        private function result(Request $request)
         {
             $result = null;
             if (
@@ -28,6 +37,6 @@
                     }
             }
 
-            return view('forms.result', ['result' => $result]);
+            return view('forms.result', ['result' => $result, 'method' => $request->method()]);
         }
     }

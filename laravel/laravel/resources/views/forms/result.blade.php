@@ -4,4 +4,5 @@
 
 @section('content')
 <p>Сумма равна {{ $result ?? '' }}</p>
+<p>Метод запроса {{ $method ?? '' }}</p>
 @endsection
