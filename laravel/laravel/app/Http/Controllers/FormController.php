@@ -11,12 +11,24 @@
             return view('forms.final', ['data' => $data]);
         }
 
+        public function reg(Request $request)
+        {
+            return view('forms.reg');
+        }
+
+        public function regResult(Request $request)
+        {
+            $only = $request->only(['name', 'surname', 'login']);
+            $except = $request->except(['password', 'email']);
+            return view('forms.regResult', ['only' => $only, 'except' => $except]);
+        }
+
         public function blended(Request $request)
         {
             if ($request->isMethod('get')) {
-                return $this->form($request);
+                return $this->reg($request);
             } elseif ($request->isMethod('post')) {
-                return $this->finalForm($request);
+                return $this->regResult($request);
             }
         }
 
