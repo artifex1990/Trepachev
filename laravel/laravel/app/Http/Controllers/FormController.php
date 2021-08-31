@@ -5,12 +5,18 @@
 
     class FormController extends Controller
     {
+        public function finalForm(Request $request)
+        {
+            $data = $request->all();
+            return view('forms.final', ['data' => $data]);
+        }
+
         public function blended(Request $request)
         {
             if ($request->isMethod('get')) {
                 return $this->form($request);
             } elseif ($request->isMethod('post')) {
-                return $this->result($request);
+                return $this->finalForm($request);
             }
         }
 
