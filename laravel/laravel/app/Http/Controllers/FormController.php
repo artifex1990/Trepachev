@@ -13,6 +13,7 @@
 
         public function reg(Request $request)
         {
+            //nop
             return view('forms.reg');
         }
 
