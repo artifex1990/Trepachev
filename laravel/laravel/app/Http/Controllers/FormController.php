@@ -13,7 +13,6 @@
 
         public function reg(Request $request)
         {
-            //nop
             return view('forms.reg');
         }
 
@@ -38,8 +37,6 @@
             return view('forms.form', ['method' => $request->method()]);
         }
 
-
-        //тщз
         private function result(Request $request)
         {
             $result = null;
