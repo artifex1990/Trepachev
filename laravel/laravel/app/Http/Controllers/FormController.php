@@ -38,6 +38,8 @@
             return view('forms.form', ['method' => $request->method()]);
         }
 
+
+        //тщз
         private function result(Request $request)
         {
             $result = null;
