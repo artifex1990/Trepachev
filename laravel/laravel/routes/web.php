@@ -32,4 +32,4 @@ Route::get('/categories/', 'Product@showCategoryList');
 Route::get('/product/{category_id}/', 'Product@showCategory')->where(['category_id' => '[0-9]+']);
 Route::get('/product/{category_id}/{product_id}', 'Product@showProduct')->where(['category_id' => '[0-9]+', 'product_id' => '[0-9]+']);
 
-Route::match(['get', 'post'], '/forms/', 'FormController@blended');
+Route::match(['get', 'post'], '/forms/{dop}', 'FormController@blended');

@@ -3,6 +3,8 @@
 @section('title', 'Формы')
 
 @section('content')
+<h1>{{ $dop ?? ''}}</h1>
+
 <h2>Only</h2>
 <ul>
 @foreach ($only as $elem)

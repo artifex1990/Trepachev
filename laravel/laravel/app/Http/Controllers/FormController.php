@@ -16,11 +16,11 @@
             return view('forms.reg');
         }
 
-        public function regResult(Request $request)
+        public function regResult(Request $request, $dop = null)
         {
             $only = $request->only(['name', 'surname', 'login']);
             $except = $request->except(['password', 'email']);
-            return view('forms.regResult', ['only' => $only, 'except' => $except]);
+            return view('forms.regResult', ['only' => $only, 'except' => $except, 'dop' => $dop]);
         }
 
         public function blended(Request $request)
