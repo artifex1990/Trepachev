@@ -23,12 +23,12 @@
             return view('forms.regResult', ['only' => $only, 'except' => $except, 'dop' => $dop]);
         }
 
-        public function blended(Request $request)
+        public function blended(Request $request, $dop = null)
         {
             if ($request->isMethod('get')) {
                 return $this->reg($request);
             } elseif ($request->isMethod('post')) {
-                return $this->regResult($request);
+                return $this->regResult($request, $dop);
             }
         }
 
