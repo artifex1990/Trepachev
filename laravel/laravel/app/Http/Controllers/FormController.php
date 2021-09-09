@@ -16,6 +16,11 @@
             return view('forms.reg');
         }
 
+        public function testProduct(Request $request)
+        {
+            return $request->fullUrlWithQuery(['param' => 1]);
+        }
+
         public function regResult(Request $request, $dop = null)
         {
             $only = $request->only(['name', 'surname', 'login']);
