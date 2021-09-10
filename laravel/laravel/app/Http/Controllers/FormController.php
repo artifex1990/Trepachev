@@ -18,7 +18,12 @@
 
         public function testProduct(Request $request)
         {
-            return $request->fullUrlWithQuery(['param' => 1]);
+            $str  = "path: {$request->path()} <br>";
+            $str .= "url: {$request->url()} <br>";
+            $str .= "fullUrl: {$request->fullUrl()} <br>";
+            $str .= "fullUrlWithQuery: {$request->fullUrlWithQuery(['page' => 1])} <br>";
+            $str .= "is: " . (int)($request->is('test/*')) . "<br>";
+            return $str;
         }
 
         public function regResult(Request $request, $dop = null)
@@ -37,7 +42,6 @@
             }
         }
 
-        //my
         private function form(Request $request)
         {
             return view('forms.form', ['method' => $request->method()]);
