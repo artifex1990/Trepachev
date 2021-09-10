@@ -37,6 +37,7 @@
             }
         }
 
+        //my
         private function form(Request $request)
         {
             return view('forms.form', ['method' => $request->method()]);
