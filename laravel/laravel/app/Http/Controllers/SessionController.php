@@ -14,4 +14,17 @@
         {
             return $request->session()->get('key');
         }
+
+        public function refreshPage(Request $request)
+        {
+            $key = 'pageRefreshCount';
+            $this->refreshPageSum($request, $key);
+            return $request->session()->get($key);
+        }
+
+        private function refreshPageSum(Request $request, $key)
+        {
+            $sum = $request->session()->get($key) ?? 0;
+            $request->session()->put($key, ++$sum);
+        }
     }

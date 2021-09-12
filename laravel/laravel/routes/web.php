@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('sesssion/request', 'SessionController@sessionRequest');
 Route::get('sesssion/response', 'SessionController@sessionResponse');
+Route::get('session/refresh', 'SessionController@refreshPage');
