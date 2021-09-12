@@ -17,20 +17,5 @@ Route::get('/', function () {
     return '!!!';//view('welcome');
 });
 
-Route::get('/employee/{id}/', 'Employee@showOne')->where('id', '[0-9]+');
-Route::get('/employee/day/{day}/', 'Employee@showDay')->where('day', '[1-7]');
-Route::get('/employee/month/{month}/', 'Employee@showMonth')->where('month', '[0-9]+');
-
-Route::get('/my/cycle/', 'MyController@showCycle');
-
-Route::get('/practical/', 'PracticalController@showPractica');
-
-Route::get('/post/{id}/', 'Post@showOne')->where('id', '[0-9]+');
-Route::get('/posts/', 'Post@showAll');
-
-Route::get('/categories/', 'Product@showCategoryList');
-Route::get('/product/{category_id}/', 'Product@showCategory')->where(['category_id' => '[0-9]+']);
-Route::get('/product/{category_id}/{product_id}', 'Product@showProduct')->where(['category_id' => '[0-9]+', 'product_id' => '[0-9]+']);
-
-Route::match(['get', 'post'], '/forms/{dop?}', 'FormController@blended');
-Route::get('/test/method/', 'FormController@testProduct');
+Route::get('sesssion/request', 'SessionController@sessionRequest');
+Route::get('sesssion/response', 'SessionController@sessionResponse');

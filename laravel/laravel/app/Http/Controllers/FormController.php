@@ -23,6 +23,7 @@
             $str .= "fullUrl: {$request->fullUrl()} <br>";
             $str .= "fullUrlWithQuery: {$request->fullUrlWithQuery(['page' => 1])} <br>";
             $str .= "is: " . (int)($request->is('test/*')) . "<br>";
+
             return $str;
         }
 
