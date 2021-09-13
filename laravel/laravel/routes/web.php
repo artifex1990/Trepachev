@@ -17,14 +17,5 @@ Route::get('/', function () {
     return '!!!';//view('welcome');
 });
 
-Route::get('sesssion/request', 'SessionController@sessionRequest');
-Route::get('sesssion/response', 'SessionController@sessionResponse');
-Route::get('session/refresh', 'SessionController@refreshPage');
-Route::get('session/flush', 'SessionController@sessionFlush');
-Route::get('session/array', 'SessionController@arraySession');
-Route::get('session/forget', 'SessionController@forgetSession');
-Route::get('session/requestView', 'SessionController@sessionRequestView');
-Route::get('session/responseView', 'SessionController@sessionResponseView');
-Route::get('session/all', 'SessionController@sessionAllView');
-Route::get('session/has/{test?}', 'SessionController@sessionHas');
-Route::get('session/global', 'SessionController@sessionGloabal');
+Route::match(['get', 'post'], 'test/show1', 'TestController@show1');
+Route::get('test/show2', 'TestController@show2');
