@@ -20,6 +20,8 @@
 			return view('test', ['error' => $error]);
 		}
 		
+
+		//nop
 		public function show2()
 		{
 			return 'форма успешна отправлена';
